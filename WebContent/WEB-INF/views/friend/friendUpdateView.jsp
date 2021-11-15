@@ -34,11 +34,10 @@
 <style>
 @charset "UTF-8";
 
-
-body {
-	font-family: 'Noto Sans KR', sans-serif;
-	
+.memberjoin {
+	min-width: 65px;
 }
+
 .forth_menu {
 color: rgb(135, 211, 124);
 }
@@ -239,7 +238,7 @@ color: rgb(135, 211, 124);
 .cancelbutton {
 	width: 120px;
 	height: 40px;
-	margin-top: 1px;
+	margin-top: 38px;
 	float: right;
 	border: none;
 	background-color: rgb(213, 213, 213);
@@ -342,9 +341,7 @@ dl, ol, ul {
 				<!-- 글 작성 방법 -->
 				<div class="toggle">
 					<a href="#" class="triggerToggle"> <img class="star"
-						src="${contextPath}/resources/images/star.png">글 작성 방법 <img
-						class="toggledown" src="${contextPath}/resources/images/down.png">
-						<img class="toggleup" src="${contextPath}/resources/images/up.png">
+						src="${contextPath}/resources/images/star.png">글 작성 방법 
 					</a>
 					<div class="target">
 						주의사항

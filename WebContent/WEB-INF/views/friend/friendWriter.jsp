@@ -34,11 +34,10 @@
 <style>
 @charset "UTF-8";
 
-
-body {
-	font-family: 'Noto Sans KR', sans-serif;
-	
+.memberjoin {
+	min-width: 65px;
 }
+
 .forth_menu {
 color: rgb(135, 211, 124);
 }
@@ -277,7 +276,7 @@ color: rgb(135, 211, 124);
 .enrollbutton {
 	width: 120px;
 	height: 40px;
-	margin-top: 3%;
+	margin-top: 3.2%;
 	float: right;
 	border: none;
 	background-color: rgb(213, 213, 213);
