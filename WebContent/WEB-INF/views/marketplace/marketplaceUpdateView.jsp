@@ -13,9 +13,7 @@
 
 
 <style>
-body{
-	font-family: 'Noto Sans KR', sans-serif;
-}
+
 .third_menu {
 color: rgb(135, 211, 124);
 }
@@ -23,6 +21,7 @@ color: rgb(135, 211, 124);
 	width: 1000px;
 	margin: auto;
 	margin-bottom: 3%;
+	font-family: 'Nanum Gothic', sans-serif;
 }
 
 .wrap h2 {
