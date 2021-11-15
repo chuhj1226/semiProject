@@ -41,25 +41,26 @@
 						<div class="textbox">
 							<h3>첫번째 슬라이드</h3>
 							<p>첫번째 슬라이드 입니다.</p>
-						</div> <img src="${contextPath }/resources/images/slide.jpg">
+						</div>
+					<img src="${contextPath }/resources/images/ad3.jpg">
 				</a></li>
 				<li class="slideitem"><a>
 						<div class="textbox">
 							<h3>두번째 슬라이드</h3>
 							<p>두번째 슬라이드 입니다.</p>
-						</div> <img src="${contextPath }/resources/images/slide.jpg">
+						</div> <img src="${contextPath }/resources/images/ad2.png">
 				</a></li>
 				<li class="slideitem"><a>
 						<div class="textbox">
 							<h3>세번째 슬라이드</h3>
 							<p>세번째 슬라이드 입니다.</p>
-						</div> <img src="${contextPath }/resources/images/slide.jpg">
+						</div> <img src="${contextPath }/resources/images/ad1.jpg">
 				</a></li class="slideitem">
 				<li class="slideitem"><a>
 						<div class="textbox">
 							<h3>네번째 슬라이드</h3>
 							<p>네번째 슬라이드 입니다.</p>
-						</div> <img src="${contextPath }/resources/images/slide.jpg">
+						</div> <img src="${contextPath }/resources/images/ad4.jpg">
 				</a></li class="slideitem">
 
 				<!-- 좌,우 슬라이드 버튼 -->
