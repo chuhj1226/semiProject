@@ -146,7 +146,6 @@
         }
 
         #board_layout{
-            /* border: 1px solid lightgray;      */
             cursor: pointer;
         }
 
@@ -159,12 +158,9 @@
 
         }
 
-        #board_img img{
-			
+        #board_img img{		
 			weight: 100%;
-			object-fit: cover;
-			
-
+			object-fit: cover;			
         }
 
         #board_title{
@@ -231,6 +227,12 @@
 			margin-left: 50px;
         }
         
+        #no_best{
+        	display: flex;
+		    height: 100%;
+		    align-items: center;
+		    justify-content: center;
+        }
     </style>
 
 <title>자취는 꿀팁</title>
@@ -241,32 +243,43 @@
 
 	<div class="main_outer">
         <div class="main_header">
-            <div id="best">
-                <div id="best_header">
-                	<div id="category">
-                		<c:choose>
-                			<c:when test="${ today.btype eq '1'}">자취는 꿀팁</c:when>
-                			<c:when test="${ today.btype eq '2'}">자취는 꿀템</c:when>
-                			<c:when test="${ today.btype eq '3'}">자취는 꿀친</c:when>
-                		</c:choose>
-					</div>
-	                    <div id="best_img">
-	                       <img src="${ contextPath }${ today.filePath }${ today.changeName }">
-                    </div>
-                    <div id="best_right">
-                      <button id="best_btn" onclick="todayView(${today.bid}, ${today.btype})">보러가기</button>
-                    </div>
-                </div>
-                <div id="best_title">
-                	${ today.btitle }
-                </div> 
-                <div id="profile">
-	               <img src="${ contextPath }${ today.profilePath }"> 
+        	<c:choose>
+        		<c:when test="${ empty today.btitle }">
+        			<div id="best">
+        				<div id="no_best">
+        					<h2>오늘의 게시물이 없습니다.</h2>
+        				</div>
+        			</div>
+        		</c:when>
+        		<c:otherwise>
+        			<div id="best">
+	                <div id="best_header">
+	                	<div id="category">
+	                		<c:choose>
+	                			<c:when test="${ today.btype eq '1'}">자취는 꿀팁</c:when>
+	                			<c:when test="${ today.btype eq '2'}">자취는 꿀템</c:when>
+	                			<c:when test="${ today.btype eq '3'}">자취는 꿀친</c:when>
+	                		</c:choose>
+						</div>
+		                    <div id="best_img">
+		                       <img src="${ contextPath }${ today.filePath }${ today.changeName }">
+	                    	</div>
+	                    <div id="best_right">
+	                      <button id="best_btn" onclick="todayView(${today.bid}, ${today.btype})">보러가기</button>
+	                    </div>
+	                </div>
+	                <div id="best_title">
+	                	${ today.btitle }
+	                </div> 
+	                <div id="profile">
+		               <img src="${ contextPath }${ today.profilePath }"> 
+		            </div>
+		            <div id="name">${ today.nickname }</div>
 	            </div>
-	            <div id="name">${ today.nickname }</div>
-            </div>
+        		</c:otherwise>
+            </c:choose>
             <div id="ad">
-				<%@ include file="/WEB-INF/views/common/ad.jsp"%>
+				<%@ include file="/WEB-INF/views/common/mainad.jsp"%>
             </div>
         </div>
         <div class="main_body">
@@ -284,9 +297,9 @@
 	                        ${ board.btitle }
 	                    </div>
 	                    <div id="board_profile">
-	               			<img src="${ contextPath }${ today.profilePath }"> 
+	               			<img src="${ contextPath }${ board.profilePath }"> 
 	           			</div>
-	           			<div id="board_name">${ today.nickname }</div>
+	           			<div id="board_name">${ board.nickname }</div>
 
 	                </div>
 	            </c:forEach>
@@ -306,9 +319,9 @@
 	                        ${ board.btitle }
 	                    </div>
 	                     <div id="board_profile">
-	               			<img src="${ contextPath }${ today.profilePath }"> 
+	               			<img src="${ contextPath }${ board.profilePath }"> 
 	           			</div>
-	           			<div id="board_name">${ today.nickname }</div>
+	           			<div id="board_name">${ board.nickname }</div>
 	                </div>
 	            </c:forEach>
             </div>
