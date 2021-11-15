@@ -10,31 +10,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>main</title>
 
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link
-	href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap"
-	rel="stylesheet">
-
-<link rel="stylesheet"
-	href="<%=request.getContextPath() %>/resources/css/header_style.css">
-<link
-	href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
-	rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-	href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&display=swap"
-	rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-	href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap"
-	rel="stylesheet">
-
-
 </head>
 <body>
 

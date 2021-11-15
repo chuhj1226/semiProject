@@ -74,7 +74,7 @@
             
         }
 
-        .content{
+        .report_content{
             margin-top: 20px;
             min-height: 200px;
             font-size: 14px;
@@ -133,7 +133,7 @@
                 <p><fmt:formatDate value="${ report.reportDate }" type="both"
 						pattern="yyyy년 MM월 dd일 HH:mm:ss"/></p>
             </div>
-                <p class="content">${ report.rContent }</p>
+                <p class="report_content">${ report.rContent }</p>
       
                     <p>신고된 사용자 회원번호 및 닉네임: ${ report.writer }번 회원, ${ report.nickName }</p>
                     <p>신고된 내용 : "${ report.reason }"</p>
