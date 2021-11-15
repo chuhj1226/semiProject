@@ -384,7 +384,9 @@ public class FriendDao {
 			pstmt.setInt(1, board.getCid());
 			pstmt.setString(2, board.getBtitle());
 			pstmt.setString(3, board.getBcontent());
-			pstmt.setInt(4, board.getBid());
+			pstmt.setString(4, board.getGender());
+			pstmt.setInt(5, board.getBid());
+			
 
 			result = pstmt.executeUpdate();
 
