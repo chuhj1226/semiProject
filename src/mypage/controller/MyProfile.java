@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import member.model.vo.Member;
+import mypage.model.service.MypageService;
+
 /**
  * Servlet implementation class MyProfile
  */
@@ -28,6 +31,16 @@ public class MyProfile extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int userNo = ((Member)request.getSession().getAttribute("loginUser")).getUserNo();
+		
+		int likeCount = new MypageService().selectLikeCount(userNo);
+
+		int productCount =   new MypageService().selectProductCount(userNo);
+		
+		request.setAttribute("likeCount", likeCount);
+		request.setAttribute("productCount", productCount);
+		
+		System.out.println(likeCount);
 		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/mypage/myprofileView.jsp");
 		view.forward(request, response);
 	}

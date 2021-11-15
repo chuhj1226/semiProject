@@ -13,9 +13,10 @@
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
 	rel="stylesheet">
 <style>
+/* 
 body{
 	font-family: 'Noto Sans KR', sans-serif;
-}
+} */
 .second_menu {
 color: rgb(135, 211, 124);
 }
@@ -81,7 +82,6 @@ color: rgb(135, 211, 124);
 	margin-top : 50px;
 }
 
-
 </style>
 </head>
 <body>
@@ -104,6 +104,21 @@ color: rgb(135, 211, 124);
 		rel="stylesheet">
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>
+<style>
+ 
+.main-nav {
+	padding-bottom: 4px;
+}
+
+*, ::after, ::before {
+    box-sizing: content-box;
+}
+.memberjoin {
+    min-width: 65px;
+}
+
+ 
+</style>
 
 
 	<div class="outer">

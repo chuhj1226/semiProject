@@ -103,4 +103,14 @@ WHERE USER_NO = ?
 		ORDER BY BID DESC) A)
         WHERE RUM BETWEEN ? AND ?
 	</entry>
+	<entry key="likeCount">
+	SELECT COUNT(BID)
+	FROM LIKE_BOARD
+	WHERE USER_NO = ?
+	</entry>
+	<entry key="productCount">
+	SELECT COUNT(MID)
+	FROM MY_LIST_BOARD
+	WHERE USER_NO = ?
+	</entry>
 </properties>

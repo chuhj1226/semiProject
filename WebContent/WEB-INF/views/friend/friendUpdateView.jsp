@@ -122,7 +122,7 @@ color: rgb(135, 211, 124);
 
 .title {
 	width: 1280px;
-	
+	margin: auto;
 	margin-bottom: 3%;
 }
 
