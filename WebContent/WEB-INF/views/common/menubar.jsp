@@ -86,7 +86,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 11;
+  z-index: 10000;
 }
 body {
 	font-family: 'Noto Sans KR', sans-serif;

@@ -480,6 +480,7 @@ html {
 		<p>꿀친 게시판의 게시글 ${ pi.listCount }개가 검색되었습니다.</p>
 	</div>
 	
+	
 		<!-- 페이지 업다운 버튼 -->
 	<div class="fixed-pageUpDown">
 		<a id="pageUp"><img
