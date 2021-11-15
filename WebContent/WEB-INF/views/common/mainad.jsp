@@ -26,7 +26,7 @@
 	font-size: 0;
 	overflow: hidden;
 	position: relative;
-	height: 500px; /*********/
+	height: 500px; 
 }
 
 .section .slidelist>li {
@@ -257,29 +257,26 @@
 			<ul class="slidelist">
 				<!-- 슬라이드 영역 -->
 				<li class="slideitem">
-						<a>
-<!-- 							<div class="textbox">
-								<h3>첫번째 슬라이드</h3>
-								<p>첫번째 슬라이드 입니다.</p>
-							</div>  -->
-							<img src="${contextPath }/resources/images/mainad1.png">
-						</a>
-				</li>
-				<li class="slideitem">
 					<a>
-						<img src="${contextPath }/resources/images/mainad2.png">
+						<img src="${contextPath }/resources/images/madpt1.jpg">
 					</a>
 				</li>
 				<li class="slideitem">
 					<a>
-						<img src="${contextPath }/resources/images/mainad3.png">
+						<img src="${contextPath }/resources/images/madpt2.jpg">
 					</a>
 				</li>
 				<li class="slideitem">
 					<a>
-						<img src="${contextPath }/resources/images/mainad4.png">
+						<img src="${contextPath }/resources/images/madpt3.jpg">
 					</a>
 				</li>
+				<li class="slideitem">
+					<a>
+						<img src="${contextPath }/resources/images/madpt4.jpg">
+					</a>
+				</li>
+				</ul>
 
 				<!-- 좌,우 슬라이드 버튼 -->
 				<div class="slide-control">
@@ -302,7 +299,6 @@
 
 				</div>
 
-			</ul>
 			<!-- 페이징 -->
 			<ul class="slide-pagelist">
 				<li><label for="slide01"></label></li>
