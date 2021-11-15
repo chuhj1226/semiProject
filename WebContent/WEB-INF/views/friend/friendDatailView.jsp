@@ -21,9 +21,6 @@
 <link href="<%=request.getContextPath() %>/resources/css/slide.css"
 	rel="stylesheet">
 <style>
-body {
-	font-family: 'Noto Sans KR', sans-serif;
-}
 
 
 .forth_menu {
@@ -34,6 +31,7 @@ color: rgb(135, 211, 124);
 	width: 1280px;
 	margin: auto;
 	margin-bottom: 3%;
+	font-family: 'Nanum Gothic', sans-serif;
 }
 
 /* 이미지 영역 */
@@ -98,6 +96,10 @@ img {
 	margin-top: 3%;
 	margin-left: 3%;
 	min-height: 300px;
+}
+
+.content p {
+font-family: 'Nanum Gothic', sans-serif;
 }
 
 .notify {

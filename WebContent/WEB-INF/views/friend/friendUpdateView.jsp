@@ -46,6 +46,9 @@ color: rgb(135, 211, 124);
 	width: 1280px;
 	margin: auto;
 	margin-bottom: 3%;
+	 font-family: 'Noto Sans KR', sans-serif;
+        font-weight: normal;
+	/* font-family: 'Nanum Gothic', sans-serif; */
 }
 
 /* 이미지 영역 */
@@ -142,6 +145,7 @@ color: rgb(135, 211, 124);
 	font-size: 30px;
 	font-weight: bolder;
 	margin-top: 100px;
+	
 }
 
 #locationtext {

@@ -14,9 +14,7 @@
 	rel="stylesheet">
 </head>
 <style>
-body{
-	font-family: 'Noto Sans KR', sans-serif;
-}
+
 .five_menu {
 color: rgb(135, 211, 124);
 }
@@ -25,6 +23,7 @@ color: rgb(135, 211, 124);
 	/*1280px*/
 	margin: auto;
 	margin-bottom: 3%;
+	font-family: 'Nanum Gothic', sans-serif;
 	/* font-family: 'Noto Sans KR', sans-serif;
             font-weight: normal; */
 }

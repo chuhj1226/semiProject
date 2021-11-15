@@ -12,6 +12,7 @@
             margin: auto;
             margin-top: 20px;
             margin-bottom: 100px;
+            font-family: 'Nanum Gothic', sans-serif;
         }
 
         .main_header{

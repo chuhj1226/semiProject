@@ -18,9 +18,7 @@
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
 	rel="stylesheet">
 <style>
-/* body {
-	font-family: 'Noto Sans KR', sans-serif;
-} */
+
 .second_menu {
 color: rgb(135, 211, 124);
 }
@@ -28,6 +26,7 @@ color: rgb(135, 211, 124);
 	width: 1280px;
 	margin: auto;
 	margin-bottom: 2%;
+	font-family: 'Nanum Gothic', sans-serif;
 }
 
 .wrap {

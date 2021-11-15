@@ -12,6 +12,7 @@
 		.outer {
 			width: 1000px;
 			margin: auto;
+			
 		}
 		
 		.wrap {
