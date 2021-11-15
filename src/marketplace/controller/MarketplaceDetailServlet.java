@@ -79,6 +79,7 @@ public class MarketplaceDetailServlet extends HttpServlet {
 		}
 
 		Board board = marketservice.selectMarketplace(bid);
+		System.out.println(board.getProfilePath());
 		
 		
 		// 좋아요 여부 조회

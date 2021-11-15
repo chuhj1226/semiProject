@@ -362,8 +362,8 @@
 
 	<entry key="selectMarketplace">
 		SELECT
-		BID
-		, CID
+	
+		 CID
 		, MID
 		, PRICE
 		, BCOUNT

@@ -261,16 +261,16 @@ public class MarketplaceDao {
 				board.setMid(rset.getInt("mid"));
 				board.setPrice(rset.getLong("price"));
 				board.setBcount(rset.getInt("bcount"));
+				board.setCname(rset.getString("cname"));
 				board.setModifyDate(rset.getTimestamp("modify_date")); // 물론 Date 타입도 util.Date 타입 이어야 한다.
+				board.setUserName(rset.getString("user_name"));
 				board.setCreateDate(rset.getTimestamp("create_date")); // getDate로 가져오면 00시 00분 00초가 되기 때문에 Timestamp로
 				board.setCondition(rset.getString("condition"));
 				board.setLocation(rset.getString("location"));
 				board.setNickname(rset.getString("nickname"));
-				board.setCname(rset.getString("cname"));
 				board.setBtitle(rset.getString("btitle"));
-				board.setBwriter(rset.getInt("bwriter"));
 				board.setBcontent(rset.getString("bcontent"));
-				board.setUserName(rset.getString("user_name"));
+				board.setBwriter(rset.getInt("bwriter"));
 				board.setProfilePath(rset.getString("profile_path"));
 
 				// 가져와야함
