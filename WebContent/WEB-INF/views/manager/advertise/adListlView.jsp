@@ -104,25 +104,6 @@
 	width: 100px;
 }
 
-.page_button {
-	text-align: center;
-	margin-top: 40px;
-	margin-bottom: 50px;
-}
-
-.page_button>button {
-	border-style: none;
-	margin: 10px;
-	padding: 10px 10px;
-	border-radius: 5px;
-	font-size: 18px;
-	cursor: pointer;
-	color: #432;
-}
-
-.page_button>button:nth-child(${pi.page+2}) {
-	background-color: rgb(135, 211, 124);
-}
 
 .board_ul {
 	cursor: pointer;
@@ -132,6 +113,71 @@ a {
 	text-decoration: none;
 	color: #432;
 }
+
+.board_paging {
+	height: 40px;
+	line-height: 40px;
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	width: 480px;
+	margin: auto;
+
+}
+
+.board_paging a {
+	text-decoration: none;
+	line-height: 40px;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+ 	margin: 0 3px; 
+	width: 40px;
+	height: 40px;
+	text-decoration: none;
+}
+
+boadr_paging a:hover {
+	cursor: pointer;
+}
+
+.board_paging a.current_page { /*현재 페이지 */
+	border: 2px solid rgb(135, 211, 124);
+	border-radius: 50%;
+	margin-top:-3%;
+}
+
+.board_paging .pprev {
+	background:
+		url('<%=request.getContextPath()%>/resources/images/page_pprev.png')
+		no-repeat center center;
+}
+
+.board_paging .prev {
+	background: url('${contextPath}/resources/images/page_prev.png')
+		no-repeat center center;
+	margin-right: 7px;
+}
+
+.board_paging .next {
+	background: url('${contextPath}/resources/images/page_next.png')
+		no-repeat center center;
+	margin-left: 7px;
+}
+
+.board_paging .nnext {
+	background:	url('${contextPath}/resources/images/page_nnext.png') no-repeat center center;
+	margin-right: 0;
+}
+
+.pagingcComment {
+	text-align:center;
+	font-weight: 900;
+	margin-top: 3px;
+	color: #707070;
+	font-size: 15px;
+}
+
 </style>
 </head>
 
@@ -172,46 +218,49 @@ a {
 		</div>
 	</div>
 </div>
-<div class="page_button">
+     <ul class="board_paging">
+	
+	<!-- 1번 페이지 -->	
+		<li><a href="${ contextPath }/friend/main?page=1${ searchParam }" class="arrow pprev"></a></li>
+		<!-- 이전페이지 -->
+		<li><c:choose>
+				<c:when test="${ pi.page > 1 }">
+					<a class="arrow prev" href="${ contextPath }/friend/main?page=${ pi.page - 1 }${ searchParam }"></a>
+				</c:when>
+				<c:otherwise>
+					<a class="arrow prev" href="#"></a>
+				</c:otherwise>
+			</c:choose></li>
 
-	<button onclick="location.href='${ contextPath }/ad/list?page=1'">&lt;&lt;</button>
+		<!-- 최대 5개의 페이지 목록 -->
+		<c:forEach var="p" begin="${ pi.startPage }" end="${ pi.endPage }">
+			<li><c:choose>
+					<c:when test="${ p eq pi.page }">
+						<a class="current_page" href="#">${ p }</a>
+					</c:when>
+					<c:otherwise>
+						<a href="${ contextPath }/friend/main?page=${ p }${ searchParam }">${ p }</a>
+					</c:otherwise>
+				</c:choose></li>
+		</c:forEach>
 
-	<c:choose>
-		<c:when test="${ pi.page > 1 }">
-			<button
-				onclick="location.href='${ contextPath }/ad/list?page=${ pi.page - 1 }'">&lt;</button>
-		</c:when>
-		<c:otherwise>
-			<button onclick="location.href='#'">&lt;</button>
-		</c:otherwise>
-	</c:choose>
+		<!-- 다음페이지 -->
+		<li><c:choose>
+				<c:when test="${ pi.page < pi.maxPage }">
+					<a class="arrow next" href="${ contextPath }/friend/main?page=${ pi.page + 1 }${ searchParam }"></a>
+				</c:when>
+				<c:otherwise>
+					<a class="arrow next" href="#"></a>
+				</c:otherwise>
+			</c:choose></li>
+			
+		<!-- 마지막 페이지 -->
+			<li><a class="arrow nnext" href="${ contextPath }/friend/main?page=${ pi.maxPage }${ searchParam }"></a></li>
+	</ul>
 
-	<c:forEach var="p" begin="${ pi.startPage }" end="${ pi.endPage }">
-		<c:choose>
-			<c:when test="${ p eq pi.page }">
-				<button onclick="location.href='#'" class="current_page">${ p }</button>
-			</c:when>
-			<c:otherwise>
-				<button
-					onclick="location.href='${ contextPath }/ad/list?page=${ p }'">${ p }</button>
-			</c:otherwise>
-		</c:choose>
-	</c:forEach>
-
-	<c:choose>
-		<c:when test="${ pi.page < pi.maxPage }">
-			<button
-				onclick="location.href='${ contextPath }/ad/list?page=${ pi.page + 1 }'">&gt;</button>
-		</c:when>
-		<c:otherwise>
-			<button onclick="location.href='#'">&gt;</button>
-		</c:otherwise>
-	</c:choose>
-
-	<button
-		onclick="location.href='${ contextPath }/board/list?page=${ pi.maxPage }'">&gt;&gt;</button>
-
-</div>
+	<div class="pagingcComment">
+		<p>꿀친 게시판의 게시글 ${ pi.listCount }개가 검색되었습니다.</p>
+	</div>
 
 <%@ include file="/WEB-INF/views/common/footer.jsp"%>
 <script>
