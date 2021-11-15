@@ -24,6 +24,8 @@
 body {
 	font-family: 'Noto Sans KR', sans-serif;
 }
+
+
 .forth_menu {
 color: rgb(135, 211, 124);
 }
@@ -44,7 +46,6 @@ color: rgb(135, 211, 124);
 }
 
 .mainarea {
-	/* background-color: gray; */
 	border: 1px solid black;
 	display: flex;
 	width: 47%;
@@ -52,12 +53,12 @@ color: rgb(135, 211, 124);
 	align-items: center;
 	margin-left: 2%;
 	max-width: 100%;
+	overflow: hidden;
 }
 
 img {
-	/* max-height: 430px;
-	max-weight: 100%; */
-	max-height: 90%;
+	weight: 100%;
+	object-fit: cover;
 }
 
 .subarea {
@@ -399,11 +400,6 @@ img {
 	text-decoration: underline;
 	 margin: 5px;
 }
-/* 대댓글 */
-.buttons {
-	text-decoration: underline;
-	 margin: 5px;
-}
 
 /* 댓글 삭제 */
 .commentremove {
@@ -421,16 +417,36 @@ img {
 
 .commentInsert {
 	display: flex;
-	justify-content: center;
+	margin-left: 10px;
 	align-items: center;
 	padding: 20px;
 }
 
+.commentInsertprofile1 {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	overflow: hidden;
+}
+
+.commentInsertprofile2 {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.comment1 {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
 .reply_comment {
-	width: 1000px;
-	height: 80px;
+	width: 1100px;	
 	resize: none;
 	font-size: 20px;
+	margin-left: 40px;
 }
 
 .reply_ul {
@@ -441,24 +457,29 @@ img {
 }
 
 .commentbutton {
-	width: 120px;
-	height: 40px;
-	margin-left: 1%;
-	float: right;
-	border: none;
-	background-color: rgb(213, 213, 213);
+	margin-left:10px;
+	border-top: none;	
+	border-right: none;
+	border-left: none;
+	font-size:20px;
+	width: 100px;
+	height: 50px;
+	background: white;
 }
 
 .commentbutton:hover {
-	background-color: rgb(135, 211, 124);
-	border: none;
+	border-top: none;	
+	border-right: none;
+	border-left: none;
+	color: rgb(135, 211, 124);
 }
 
 .commentbutton:active {
+	border-top: none;	
+	border-right: none;
+	border-left: none;
 	position: relative;
-	width: 120px;
-	height: 40px;
-}
+} 
 
 .replaycomment {
 	margin-left: 10%;
@@ -483,9 +504,36 @@ img {
 	resize: none;
 	font-size: 20px;
 	margin-top: 30px;
-	z-index : 5;
 }
 
+
+/******페이지 업다운 버튼*********/
+html {
+	/* scroll-behavior: smooth; */
+	
+}
+
+.fixed-pageUpDown {
+	position: fixed;
+	left: 85%;
+	top: 80%;
+	display: flex;
+	flex-direction: column; /*수직 정렬*/	
+}
+
+#pageUp img {
+	width: 50px;
+}
+
+#pageDown img {
+	width: 50px;
+}
+
+#pageUp, #pageDown {
+	cursor: pointer;
+	transform: scale(1.05);
+}
+/***********************/
 
 </style>
 </head>
@@ -513,9 +561,6 @@ img {
 			</c:choose>
 
 		</div>
-		<%-- ${ board.writeday }
-${ board.writetime } 
-${ board.writemin } --%>
 
 		<!-- 신고하기 버튼 -->
 		<div class="notify" onclick="replyLogin();">
@@ -530,7 +575,6 @@ ${ board.writemin } --%>
 				<span class="title_span">&nbsp;</span>
 			</h4>
 			<p>${ board.btitle }</p>
-			<%-- <p>${notice.ntitle}</p> --%>
 		</div>
 
 		<!-- 이미지 영역 -->
@@ -546,7 +590,6 @@ ${ board.writemin } --%>
 					</c:when>
 				</c:choose>
 			</c:forEach>
-			<%-- <c:otherwise> --%>
 			<!-- 서브이미지 -->
 			<div class="item_area1 subarea">
 				<div class="item_imgBox">
@@ -689,23 +732,23 @@ ${ board.bwriter} --%>
 
 					<div class="commentbtn">
 						<c:if test="${ loginUser.userNo == answer.writer }">
+
 							<li class="commentremove"
 								onclick="deleteReply(${board.bid}, ${ answer.aid });">삭제</li>
 						</c:if>
-						<div class="buttons">
-							<li class="btnAdd"">댓글</li>
-						</div>
 						<c:choose>
-						<c:when test="${!empty loginUser }">
-						<li class="commentnotify" onclick="Rshow('${ answer.nickName}','${answer.acontent }',${ answer.aid },${ answer.writer });">신고</li>
-						</c:when>
-						<c:otherwise>
-						<li class="commentnotify" onclick="replyLogin();">신고</li>
-						</c:otherwise>
+              <c:when test="${!empty loginUser }">
+                 <li class="commentnotify" onclick="Rshow('${ answer.nickName}','${answer.acontent }',${ answer.aid },${ answer.writer });">신고</li>
+              </c:when>
+              <c:otherwise>
+                 <li class="commentnotify" onclick="replyLogin();">신고</li>
+              </c:otherwise>
 						</c:choose>
-					<li class="commenttime"><fmt:formatDate
-							value="${ reply.createDate }" type="both" pattern="yyyy.MM.dd HH:mm:ss" /></li>
+					<li class="commenttime">
+					<fmt:formatDate value="${ answer.createDate }" type="both" pattern="yyyy.MM.dd HH:mm:ss" /></li>
+
 					</div>	
+
 
 
 				</ul>
@@ -747,11 +790,23 @@ ${ board.bwriter} --%>
 
 		<hr id="hr3">
 		<!-- 댓글 입력 -->
-		<div class="commentInsert">
+		<p class="comment1">댓글</p>
+		<div class="commentInsert">	
+			<div class="commentInsertprofile1">
+				<img class="commentInsertprofile2" src="${ contextPath }${ loginUser.profilePath }">
+			</div>
 			<textarea class="reply_comment"></textarea>
-			<button onclick="addReply(${ board.bid });" class="commentbutton">댓글 등록</button>
+			<button onclick="addReply(${ board.bid });" class="commentbutton">댓글</button>
 		</div>
 
+	</div>
+	
+	<!-- 페이지 업다운 버튼 -->
+	<div class="fixed-pageUpDown">
+		<a id="pageUp"><img
+			src="${contextPath}/resources/images/pageUp.png"></a> <a
+			id="pageDown"><img
+			src="${contextPath}/resources/images/pageDown.png"></a>
 	</div>
 	
 	
@@ -780,28 +835,10 @@ ${ board.bwriter} --%>
 				}
 			}
 	</script>
-
-	<c:choose>
-		<c:when test="${ !empty loginUser }">
-			<script>
-				function noteList(nickname){
-					location.href='${contextPath}/note/write?receiveUser='+nickname;
-				}
-			</script>
-		</c:when>
-		<c:otherwise>
-			<script>
-				function noteList(){
-					alert('로그인 후 이용 가능합니다');
-					location.href="${contextPath }/login";	
-				}
-			</script>
-		</c:otherwise>
-		</c:choose>
-
-
 	
-	<c:choose>
+	
+	
+		<c:choose>
 		<c:when test="${ !empty loginUser }">
 			<script>
 			/* 댓글 입력 */
@@ -818,10 +855,11 @@ ${ board.bwriter} --%>
 							html += '<ul class="comment_ul"></li><li class="commentprofile1"><img class="commentprofile2" src="${contextPath}'
 								  + data[i].profilePath +'"><li class="commentwriter">' + data[i].nickName 
 								  + '<li class="commenttext">' + data[i].acontent
-								  + '</li><div class="commentbtn"><li class="commentremove" onclick="deleteReply(${board.bid}, ${ answer.aid });">삭제</li><div class="buttons"><li class="commentnotify">신고</li></div><li class="btnAdd">댓글</li>'
+								  + '</li><div class="commentbtn"><li class="commentremove" onclick="deleteReply(${board.bid}, ${ answer.aid });">삭제</li><li class="commentnotify" onclick=Rshow("'+data[i].nickName+'","'+data[i].acontent+'","'+data[i].aid+'","'+data[i].writer+'");>신고</li>'
 								  + '<li class="commenttime">' + data[i].createDate + '</li></div></ul>';
 							      
 						}
+						location.reload();
 						/* 갱신 된 replyList를 테이블에 다시 적용 */
 						$(".comment").html(html);
 						/* 댓글 작성 부분 리셋 */
@@ -832,25 +870,6 @@ ${ board.bwriter} --%>
 					}
 				});
 			}
-	
-
-	/* 댓글 입력 */
-	function addReply(bid) {	
-		$.ajax({
-			url : "${contextPath}/friend/insertReply",
-			type : "post",
-			dataType : "json",
-			data : { bid : bid, acontent : $(".reply_comment").val() },
-			success : function(data) {
-				// console.log(data);
-				var html = '';
-				for(var i in data){
-					html += '<ul class="comment_ul"></li><li class="commentprofile1"><img class="commentprofile2" src="${contextPath}'
-						  + data[i].profilePath +'"><li class="commentwriter">' + data[i].nickName 
-						  + '<li class="commenttext">' + data[i].acontent
-						  + '</li><li class="commentremove" onclick="deleteReply(${board.bid}, ${ answer.aid });">삭제</li><li class="commentnotify" onclick=Rshow("'+data[i].nickName+'","'+data[i].acontent+'","'+data[i].aid+'","'+data[i].writer+'")>신고</li>'
-						  + '<li class="commenttime">' + data[i].createDate + '</li></ul>';
-
 			</script>
 	</c:when>
 		<c:otherwise>
@@ -863,10 +882,9 @@ ${ board.bwriter} --%>
 			</script>
 		</c:otherwise>
 	</c:choose>
-		
-	
+
 	<c:choose>
-		<c:when test="${ loginUser.userNo == board.bwriter }">
+		<c:when test="${ !empty loginUser.userNo }">
 	<script>
 	/* 댓글 삭제 */
 		function deleteReply(bid, aid){
@@ -915,6 +933,28 @@ ${ board.bwriter} --%>
 		</c:otherwise>
 	</c:choose>
 
+	<c:choose>
+		<c:when test="${ !empty loginUser }">
+			<script>
+				function noteList(nickname){
+					location.href='${contextPath}/note/write?receiveUser='+nickname;
+				}
+			</script>
+		</c:when>
+		<c:otherwise>
+			<script>
+				function noteList(){
+					alert('로그인 후 이용 가능합니다');
+					location.href="${contextPath }/login";	
+				}
+			</script>
+		</c:otherwise>
+		</c:choose>
+
+
+	
+
+
 
 	<script>
 	/* 서브이미지 슬라이드 */
@@ -953,7 +993,7 @@ ${ board.bwriter} --%>
 			}, 1500);
 	 } 
 	</script>
-	
+
 	
 </body>
 </html>

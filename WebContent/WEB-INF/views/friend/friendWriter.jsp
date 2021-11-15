@@ -51,7 +51,6 @@ color: rgb(135, 211, 124);
 
 /* 이미지 영역 */
 .imagearea {
-	/* 	background-color: gray; */
 	margin-top: 5%;
 	height: 450px;
 	width: 100%;
@@ -63,39 +62,30 @@ color: rgb(135, 211, 124);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 }
 
 .image_area img {
 	width: 100%;
-	height: 100%;
+	object-fit: cover;
 	justify-content: center;
 	align-items: center;
 }
 
 #image_area1 {
 	float: left;
-	/* 	background-color: yellow; */
 	height: 450px;
 	width: 47%;
-	/* width: 630px; */
+	color: red;
 }
 
-/* #thumbnail {
-	float: left; 
-	background-color: blue;
-	height : 450px;
-	width: 47%;
-	margin-top: -450px;djssl;
-	
-}
- */
+
 .files {
 	display: none;
 }
 
 .subarea {
 	margin-left: 3%;
-	/* 	background-color: green; */
 	height: 450px;
 	width: 50%;
 	flex-wrap: wrap;
@@ -103,27 +93,24 @@ color: rgb(135, 211, 124);
 }
 
 #image_area2 {
-	/* background-color: pink; */
 	height: 210px;
 	width: 300px;
 	float: right;
 }
 
 #image_area3 {
-	/* 	background-color: green; */
 	height: 210px;
 	width: 300px;
+	color: red;
 }
 
 #image_area4 {
-	/* 	background-color: blue; */
 	height: 210px;
 	width: 300px;
 	margin-top: 30px;
 }
 
 #image_area5 {
-	/* background-color: yellow; */
 	height: 210px;
 	width: 300px;
 	float: right;
@@ -136,7 +123,7 @@ color: rgb(135, 211, 124);
 
 .title {
 	width: 1280px;
-	margin: auto;
+	
 	margin-bottom: 3%;
 }
 
@@ -151,13 +138,10 @@ color: rgb(135, 211, 124);
 	border-right: none;
 	border-left: none;
 	border-bottom: 1px solid;
-	/* 	border-color: rgb(213, 213, 213);
-	border-width: 1px; */
 	width: 1280px;
 	height: 40px;
 	font-size: 30px;
 	font-weight: bolder;
-	/* color: rgb(116, 116, 116); */
 	margin-top: 100px;
 }
 
@@ -243,6 +227,8 @@ color: rgb(135, 211, 124);
 	width: 100%;
 	margin: 0 auto;
 	color: #333;
+	margin-left: 10px;
+	
 }
 
 .textarea {
@@ -350,30 +336,24 @@ line-height:normal;
 					<!-- 토글 슬라이드 다운 -->
 					<!-- 글 작성 방법 -->
 					<div class="toggle">
-						<a href="#" class="triggerToggle"> <img class="star"
-							src="${contextPath}/resources/images/star.png">글 작성 방법 <img
-							class="toggledown" src="${contextPath}/resources/images/down.png">
-							<img class="toggleup"
-							src="${contextPath}/resources/images/up.png">
+						<a href="#" class="triggerToggle">
+						 <img class="star" src="${contextPath}/resources/images/star.png">글 작성 주의사항
 						</a>
-						<div class="target">
-							주의사항
+						<div class="target">	
 							<ul>
+								<li>*는 필수입력입니다</li>
 								<li>비속어, 욕설은 금지입니다.</li>
 								<li>상대방을 위헙하는 언행이나 기분을 상하게 하는 태도는 하지 않도록 합니다.</li>
 								<li>사진에 과도한 노출등 불쾌함을 줄 수있는 사진은 안됩니다.</li>
 								<li>명함, 이름표, 학생증등 개인정보가 노출되지 않도록 주의하세요.</li>
-
-								<li>사진 첨부 시 용량은 장당 최대 20MB까지 업로드할 수 있고, jpg, png, webp,
-									heif, heic, gif 포맷을 지원합니다. 비율은 2:3 어쩌구 저ㅓㅉ구</li>
 							</ul>
 						</div>
 					</div>
 
 					<!-- 기본 정보 입력 -->
 					<div class="toggle">
-						<a href="#" class="triggerToggle"> <img class="star"
-							src="${contextPath}/resources/images/check.png">기본 정보 입력
+						<a href="#" class="triggerToggle">
+						<img class="star" src="${contextPath}/resources/images/check.png">기본 정보 입력
 						</a>
 
 						<div class="target">
@@ -393,10 +373,11 @@ line-height:normal;
 							<p id="gender">성별</p>
 							<div class="genderradio">
 								<input type="radio" id="female" name="gender" value="F" checked>
-								<label for="female">여자</label>&nbsp;&nbsp; <input type="radio"
-									id="male" name="gender" value="M"> <label for="male">남자</label>&nbsp;&nbsp;
-								<input type="radio" id="male" name="gender" value="N"> <label
-									for="male">비공개</label>
+								<label for="female">여자</label>&nbsp;&nbsp;
+								<input type="radio" id="male" name="gender" value="M">
+								<label for="male">남자</label>&nbsp;&nbsp;
+								<input type="radio" id="male" name="gender" value="N">
+								<label for="none">비공개</label>
 							</div>
 
 						</div>
@@ -405,12 +386,12 @@ line-height:normal;
 					<!-- 이미지 영역 -->
 					<div class="imagearea">
 						<!-- 메인 이미지 -->
-						<div class="image_area" id="image_area1">메인이미지</div>
+						<div class="image_area" id="image_area1" required>* 메인이미지</div>
 
 						<div class="subarea">
 							<!-- 서브이미지 -->
-							<div class="image_area" id="image_area2">서브이미지1</div>
-							<div class="image_area" id="image_area3">서브이미지2</div>
+							<div class="image_area" id="image_area2" required>서브이미지2</div>
+							<div class="image_area" id="image_area3">* 서브이미지1</div>
 							<div class="image_area" id="image_area4">서브이미지3</div>
 							<div class="image_area" id="image_area5">서브이미지4</div>
 						</div>
@@ -419,24 +400,18 @@ line-height:normal;
 					<!-- 파일업로드 -->
 					<div class="files">
 						<!-- 메인 -->
-						<input type="file" name="thumbnail" class="imgUpload"
-							id="thumbnail" accept="image/jpeg,image.png" required>
+						<input type="file" name="thumbnail" class="imgUpload" id="thumbnail" accept="image/jpeg,image.png" required>
 						<!-- 서브 -->
-						<input type="file" name="contentImg1" class="imgUpload"
-							accept="image/jpeg,image.png"> <input type="file"
-							name="contentImg2" class="imgUpload"
-							accept="image/jpeg,image.png"> <input type="file"
-							name="contentImg3" class="imgUpload"
-							accept="image/jpeg,image.png"> <input type="file"
-							name="contentImg4" class="imgUpload"
-							accept="image/jpeg,image.png">
+						<input type="file" name="contentImg1" class="imgUpload" accept="image/jpeg,image.png">
+						<input type="file" name="contentImg2" class="imgUpload" accept="image/jpeg,image.png">
+						<input type="file" name="contentImg3" class="imgUpload" accept="image/jpeg,image.png">
+						<input type="file" name="contentImg4" class="imgUpload" accept="image/jpeg,image.png">
 					</div>
 				</div>
 			</div>
 
 			<div class="title">
-				<input type="text" name="title" class="maintitle"
-					placeholder="제목을 입력해주세요." maxlength="30" required>
+				<input type="text" name="title" class="maintitle" placeholder="*제목을 입력해주세요." maxlength="30" required>
 				<p>
 					<span id="counter">0</span>/30
 				</p>
@@ -451,9 +426,6 @@ line-height:normal;
 	</form>
 	
 	<button type="button" class="cancelbutton">취소</button>
-	<%-- <button type="submit" class="previewbutton" onclick="location.href='${ contextPath }/gallery/insert'">미리보기</button> --%>
-	
-
 
 	<script>
 	//toggle slide

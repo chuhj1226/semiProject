@@ -61,40 +61,29 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 }
 
 .image_area img {
 	width: 100%;
-	height: 100%;
+	object-fit: cover;
 	justify-content: center;
 	align-items: center;
 }
 
+
 #image_area1 {
 	float: left;
-	/* 	background-color: yellow; */
 	height: 450px;
 	width: 47%;
-	/* width: 630px; */
 }
 
-/* 
-#thumbnail {
-	float: left; 
-	background-color: blue;
-	height : 450px;
-	width: 47%;
-	margin-top: -450px;
-	
-}
- */
 .files {
 	display: none;
 }
 
 .subarea {
 	margin-left: 3%;
-	/* 	background-color: green; */
 	height: 450px;
 	width: 50%;
 	flex-wrap: wrap;
@@ -102,27 +91,23 @@ body {
 }
 
 #image_area2 {
-	/* background-color: pink; */
 	height: 210px;
 	width: 300px;
 	float: right;
 }
 
 #image_area3 {
-	/* 	background-color: green; */
 	height: 210px;
 	width: 300px;
 }
 
 #image_area4 {
-	/* 	background-color: blue; */
 	height: 210px;
 	width: 300px;
 	margin-top: 30px;
 }
 
 #image_area5 {
-	/* background-color: yellow; */
 	height: 210px;
 	width: 300px;
 	float: right;
@@ -349,13 +334,11 @@ body {
 					<div class="target">
 						주의사항
 						<ul>
+							<li>*는 필수입력입니다</li>
 							<li>비속어, 욕설은 금지입니다.</li>
 							<li>상대방을 위헙하는 언행이나 기분을 상하게 하는 태도는 하지 않도록 합니다.</li>
 							<li>사진에 과도한 노출등 불쾌함을 줄 수있는 사진은 안됩니다.</li>
 							<li>명함, 이름표, 학생증등 개인정보가 노출되지 않도록 주의하세요.</li>
-
-							<li>사진 첨부 시 용량은 장당 최대 20MB까지 업로드할 수 있고, jpg, png, webp,
-								heif, heic, gif 포맷을 지원합니다. 비율은 2:3 어쩌구 저ㅓㅉ구</li>
 						</ul>
 					</div>
 				</div>
@@ -392,14 +375,14 @@ body {
 						<p id="gender">성별</p>
 						<div class="genderradio">
 							<input type="radio" id="female" name="gender" value="F"
-								<c:if test="${ board.gender == 'F' }">checked</c:if>> <label
-								for="female">여자</label>&nbsp;&nbsp; <input type="radio"
-								id="male" name="gender" value="M"
-								<c:if test="${ board.gender == 'M' }">checked</c:if>> <label
-								for="male">남자</label>&nbsp;&nbsp; <input type="radio" id="male"
-								name="gender" value="N"
-								<c:if test="${ board.gender == 'N' }">checked</c:if>> <label
-								for="male">비공개</label>
+								<c:if test="${ board.gender == 'F' }">checked</c:if>> 
+							<label for="female">여자</label>&nbsp;&nbsp;
+								<input type="radio" id="male" name="gender" value="M"
+									<c:if test="${ board.gender == 'M' }">checked</c:if>>
+							<label for="male">남자</label>&nbsp;&nbsp;
+								<input type="radio" id="male" name="gender" value="N"
+									<c:if test="${ board.gender == 'N' }">checked</c:if>>
+							<label for="none">비공개</label>
 						</div>
 
 					</div>
@@ -416,15 +399,15 @@ body {
 					<div class="subarea">
 						<!-- 서브이미지 -->
 						<div class="image_area" id="image_area2" value="서브이미지1">
-							<c:if test="${ board.friendPhotoList.size() > 1 }">
-								<img
-									src="${ contextPath }${ board.friendPhotoList.get(1).filePath }${ board.friendPhotoList.get(1).changeName }">
-							</c:if>
-						</div>
-						<div class="image_area" id="image_area3" value="서브이미지2">
 							<c:if test="${ board.friendPhotoList.size() > 2 }">
 								<img
 									src="${ contextPath }${ board.friendPhotoList.get(2).filePath }${ board.friendPhotoList.get(2).changeName }">
+							</c:if>
+						</div>
+						<div class="image_area" id="image_area3" value="서브이미지2">
+							<c:if test="${ board.friendPhotoList.size() > 1 }">
+								<img
+									src="${ contextPath }${ board.friendPhotoList.get(1).filePath }${ board.friendPhotoList.get(1).changeName }">
 							</c:if>
 						</div>
 						<div class="image_area" id="image_area4" value="서브이미지3">
@@ -468,7 +451,6 @@ body {
 
 			<button type="submit" class="enrollbutton">수정하기</button>
 			<button type="button" class="cancelbutton">취소</button>
-			<button type="button" class="previewbutton">미리보기</button>
 		</div>
 
 

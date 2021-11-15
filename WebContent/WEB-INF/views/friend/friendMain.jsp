@@ -13,13 +13,12 @@
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap"
 	rel="stylesheet">
 
-
-
 <style>
 @charset "UTF-8";
 .forth_menu {
-color: rgb(135, 211, 124);
+	color: rgb(135, 211, 124);
 }
+
 body {
 	font-family: 'Noto Sans KR', sans-serif;
 	padding-top: 120px;
@@ -47,6 +46,7 @@ header {
 	list-style: none;
 	width: 480px;
 	margin: auto;
+
 }
 
 .board_paging a {
@@ -55,12 +55,9 @@ header {
 	display: block;
 	text-align: center;
 	font-weight: bold;
-	margin: 0 3px;
-	/* border: 1px solid #e6e6e6; */
+ 	margin: 0 3px; 
 	width: 40px;
 	height: 40px;
-	text-align: center;
-	/* color: #999999; */
 	text-decoration: none;
 }
 
@@ -69,10 +66,9 @@ boadr_paging a:hover {
 }
 
 .board_paging a.current_page { /*현재 페이지 */
-	/* background-color: #030066; */
-	/* color: #fff; */
-	border: 2px solid rgb(135, 211, 124);/* #030066; */
+	border: 2px solid rgb(135, 211, 124);
 	border-radius: 50%;
+	margin-top:-3%;
 }
 
 .board_paging .pprev {
@@ -118,9 +114,6 @@ boadr_paging a:hover {
 	border-style: block;
 	border-width: 1px;
 	border-radius: 5%;
-/* 	border-top: none;
-	border-right: none;
-	border-left: none; */
 	background-color: white;
 	background-repeat: no-repeat;
 	background-position:  center;
@@ -178,10 +171,17 @@ boadr_paging a:hover {
 	cursor: pointer;
 }
 
-.image_area1 img {
-	height: 250px;
-	max-height: 80%;
+.image_area1 {
+	height: 250px;	
+	width: 100%;
 	border-radius: 3%;
+	overflow: hidden;
+}
+
+.image_area1 img {
+	height: 250px;	
+	width: auto;
+	object-fit: cover;
 }
 /* 지역 셀렉트 박스 */
 #select {
@@ -294,7 +294,34 @@ boadr_paging a:hover {
 	float: right;
 }
 
+/******페이지 업다운 버튼*********/
+html {
+	/* scroll-behavior: smooth; */
+	
+}
 
+
+.fixed-pageUpDown {
+	position: fixed;
+	left: 85%;
+	top: 80%;
+	display: flex;
+	flex-direction: column; /*수직 정렬*/
+}
+
+#pageUp img {
+	width: 50px;
+}
+
+#pageDown img {
+	width: 50px;
+}
+
+#pageUp, #pageDown {
+	cursor: pointer;
+	transform: scale(1.05);
+}
+/***********************/
 
 </style>
 </head>
@@ -376,8 +403,7 @@ boadr_paging a:hover {
 							</div>
 						</div>
 						<!-- 메인 사진 -->
-						<div class="image_area1">
-							
+						<div class="image_area1">					
 							<img src="${ contextPath }${ board.friendPhotoList.get(0).filePath }${board.friendPhotoList.get(0).changeName}">
 						</div>
 							<p class="title">${ board.btitle }</p>
@@ -453,6 +479,30 @@ boadr_paging a:hover {
 	<div class="pagingcComment">
 		<p>꿀친 게시판의 게시글 ${ pi.listCount }개가 검색되었습니다.</p>
 	</div>
+	
+		<!-- 페이지 업다운 버튼 -->
+	<div class="fixed-pageUpDown">
+		<a id="pageUp"><img
+			src="${contextPath}/resources/images/pageUp.png"></a> <a
+			id="pageDown"><img
+			src="${contextPath}/resources/images/pageDown.png"></a>
+	</div>
+
+
+	<script>
+    	$(document).ready(function(){
+	        
+	        $("#pageUp").click(function(){
+	        	$('html, body').animate({scrollTop:0}, 200);
+	        });
+	        
+	        $("#pageDown").click(function(){
+	        	$('html, body').animate({scrollTop:$('body').height()}, 200);
+	        });
+	            
+    		
+    	});
+    </script>
 
 	<br>
 
