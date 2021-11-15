@@ -18,7 +18,7 @@
 	width: 100%;
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.3);
-	z-index: 1000;
+	z-index: 1000000;
 	/* 숨기기 */
 	z-index: -1;
 	opacity: 0;

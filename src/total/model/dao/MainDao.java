@@ -45,6 +45,7 @@ public class MainDao {
 				board.setFilePath(rset.getString("file_path"));
 				board.setChangeName(rset.getString("change_name"));
 				board.setProfilePath(rset.getString("profile_path"));
+				board.setNickname(rset.getString("nickname"));
 				boardList.add(board);
 			}
 		} catch (SQLException e) {
@@ -104,6 +105,8 @@ public class MainDao {
 				board.setBtitle(rset.getString("btitle"));
 				board.setFilePath(rset.getString("file_path"));
 				board.setChangeName(rset.getString("change_name"));
+				board.setProfilePath(rset.getString("PROFILE_PATH"));
+				board.setNickname(rset.getString("nickname"));
 				boardList.add(board);
 			}
 		} catch (SQLException e) {

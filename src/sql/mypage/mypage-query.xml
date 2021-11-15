@@ -107,10 +107,12 @@ WHERE USER_NO = ?
 	SELECT COUNT(BID)
 	FROM LIKE_BOARD
 	WHERE USER_NO = ?
+	AND STATUS = 'N'
 	</entry>
 	<entry key="productCount">
 	SELECT COUNT(MID)
 	FROM MY_LIST_BOARD
 	WHERE USER_NO = ?
+	AND STATUS = 'N'
 	</entry>
 </properties>

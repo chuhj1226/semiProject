@@ -39,6 +39,11 @@ public class MainServlet extends HttpServlet {
 		request.setAttribute("infoList", info);
 		request.setAttribute("today", today);
 		request.setAttribute("marketList", market);
+		
+		System.out.println(today);
+		System.out.println(info);
+		System.out.println(market);
+		
 
 		request.getRequestDispatcher("/WEB-INF/views/common/main.jsp").forward(request, response);
 	}

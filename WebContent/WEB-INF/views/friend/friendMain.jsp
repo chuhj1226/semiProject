@@ -180,7 +180,7 @@ boadr_paging a:hover {
 
 .image_area1 img {
 	height: 250px;	
-	width: auto;
+	width: 100%;
 	object-fit: cover;
 }
 /* 지역 셀렉트 박스 */
@@ -245,6 +245,7 @@ boadr_paging a:hover {
 	text-align: left;
 	font-size: 18px;
 	font-weight: 900;
+	
 }
 
 #box {
@@ -289,8 +290,8 @@ boadr_paging a:hover {
 }
 	
 #time {
-	font-size: 12px;
-	margin-top: -30px;
+	font-size: 14px;
+	margin-top: -334px;
 	float: right;
 }
 

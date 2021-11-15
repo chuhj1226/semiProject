@@ -793,7 +793,14 @@ ${ board.bwriter} --%>
 		<p class="comment1">댓글</p>
 		<div class="commentInsert">	
 			<div class="commentInsertprofile1">
+			<c:choose>
+			<c:when test="${ !empty loginUser }">
 				<img class="commentInsertprofile2" src="${ contextPath }${ loginUser.profilePath }">
+			</c:when>
+			<c:otherwise>
+			<img class="commentInsertprofile2" src="${contextPath }/resources/images/mypage_profile.png">
+			</c:otherwise>
+			</c:choose>
 			</div>
 			<textarea class="reply_comment"></textarea>
 			<button onclick="addReply(${ board.bid });" class="commentbutton">댓글</button>

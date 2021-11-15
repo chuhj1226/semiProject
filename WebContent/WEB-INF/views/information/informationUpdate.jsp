@@ -24,6 +24,7 @@ color: rgb(135, 211, 124);
 	width: 1280px;
 	margin: auto;
 	margin-bottom: 2%;
+	z-index:1;
 }
 
 .wrap {
