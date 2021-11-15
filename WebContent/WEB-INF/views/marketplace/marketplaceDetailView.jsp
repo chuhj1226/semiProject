@@ -88,6 +88,7 @@ ul.imgs li {
 	transition-delay: 0.3s;
 }
 
+
 .bullets {
 	position: absolute;
 	display: flex;
