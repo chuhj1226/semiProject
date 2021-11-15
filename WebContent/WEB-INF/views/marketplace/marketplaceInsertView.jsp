@@ -13,8 +13,8 @@
 
 <style>
 
-*{
-	font-family: 'Nanum Gothic', sans-serif;
+body{
+	font-family: 'Noto Sans KR', sans-serif;
 }
 .third_menu {
 color: rgb(135, 211, 124);
@@ -270,7 +270,7 @@ input:not ([type="file"] ):not ([type="radio"] ) {
 	position: absolute;
 	top: 0.5rem;
 	right: 0.5rem;
-	z-index: 100;
+	z-index: 10;
 	cursor: pointer;
 }
 
