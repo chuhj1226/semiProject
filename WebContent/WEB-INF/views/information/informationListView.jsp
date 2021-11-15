@@ -7,23 +7,15 @@
 <head>
 <meta charset="UTF-8">
 <title>자취는 템빨</title>
-<!-- <link
-	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-	rel="stylesheet">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
-	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
-	rel="stylesheet"> -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-	rel="stylesheet">	
+	rel="stylesheet">
 <style>
-*{
-	font-family: 'Nanum Gothic', sans-serif;
+body {
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
 .outer {
@@ -213,13 +205,13 @@ ul, li {
 
 .board_paging a {
 	text-decoration: none;
-	line-height: 50px;
+	line-height: 40px;
 	display: block;
 	text-align: center;
 	margin: 0 3px;
 	/* border: 1px solid #e6e6e6; */
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	text-align: center;
 	color: #999999;
 	text-decoration: none;
@@ -234,9 +226,10 @@ boadr_paging a:hover {
         font-weight: bold; */
 	/* background-color: #42454c; */
 	color: black;
-	border: 3px solid rgb(135, 211, 124);
+	border: 2px solid rgb(135, 211, 124);
 	border-radius: 50%;
 	padding : -14px;
+	margin-top: -2px;
 }
 
 .board_paging .pprev {
@@ -312,6 +305,10 @@ color: rgb(135, 211, 124);
 	<jsp:include page="/WEB-INF/views/common/menubar.jsp">
 		<jsp:param name="pName" value="test" />
 	</jsp:include>
+	<!-- 광고 -->
+	<jsp:include page="/WEB-INF/views/common/ad.jsp">
+		<jsp:param name="pName" value="test" />
+	</jsp:include>
 
 
 
@@ -341,27 +338,7 @@ color: rgb(135, 211, 124);
 				</div>
 				
 				
-				
-				
-				
-				
-				
-				
-<%-- 				<div class="list_div">
-					<ul class="board_list">
-						<c:forEach var="board" items="${ boardList }">
-							<li>
-								<div class="box" onclick="detailView(${ board.bid })">
-									<img
-										src="${ contextPath }${ board.photoList.get(0).filePath}${ board.photoList.get(0).changeName }">
-									<p class="category">[ ${ board.cname } ]</p>
-									<p class="title">${ board.btitle }</p>
-								</div>
-							</li>
-						</c:forEach> 
 
-					</ul>
-				</div> --%>
 
 
 				
@@ -395,11 +372,7 @@ color: rgb(135, 211, 124);
 						</select>
 						<button type="submit" class="wbtn">조회</button>
 					
-						<!-- <button class="infobtn" value="all" onclick="all();">전체</button>
-						<button class="infobtn" value="clean" onclick="clean();" >청소</button>
-						<button class="infobtn" value="decorate" onclick="decorate();" >꾸미기</button>
-						<button class="infobtn" value="reform" onclick="reform();" >리폼</button>
-						<button class="infobtn" value="lifeInformation" onclick="lifeInformation();" >생활정보</button> -->
+						
 					
 
 					
@@ -480,7 +453,7 @@ color: rgb(135, 211, 124);
 						href="${ contextPath }/info/list?page=${ pi.maxPage }${ searchParam }"></a></li>
 				</ul>
 				<div class="pagingcComment">
-		<p>[ ${ pi.listCount } ] 개의 게시글이 조회되었습니다.</p>
+		<p> 꿀팁 게시판 [ ${ pi.listCount } ] 개의 게시글이 조회되었습니다.</p>
 	</div>
 
 
@@ -488,120 +461,6 @@ color: rgb(135, 211, 124);
 
 
 
-
-
-
-
-
-<%-- 
-				<div class="info list_div"
-					onclick="location.href='${contextPath}/info/detail'">
-					<ul class="board_list">
-						<c:forEach var="i" begin="1" end="4">
-							<div class="item" onclick="detailView(1)">
-								<!-- 1은 임시 값 -->
-								<div class="box">
-									<img src="${ contextPath }/resources/images/infoG.png">
-									<p class="category">[꾸미기]</p>
-									<p class="title">그린색 옷 스타일링</p>
-								</div>
-							</div>
-						</c:forEach>
-					</ul>
-				</div>
-
- --%>
-
-				<%-- 				<div class="list_div">
-					<ul class="board_list">
-						<c:forEach var="board" items="${ boardList }">
-							<li>
-								<div class="box">
-									<img
-										src="${ contextPath }${ board.photoList.get(0).filePath}${ board.photoList.get(0).changeName }">
-									<p class="category">[ ${ board.cname } ]</p>
-									<p class="title">${ board.btitle }</p>
-									<p class="writer">${ board.userName }|조회수 : ${ board.bcount }</p>
-								</div>
-							</li>
-						</c:forEach>
-					</ul>
-				</div> --%>
-
-
-<%-- 				<div class="information_title">
-					<img class="informationLogo"
-						src="${ contextPath }/resources/images/infocategory.png">
-				</div>
-				<div>
-					<form name="catagory">
-						<button class="infobtn" value="1">전체</button>
-						<button class="infobtn" value="2">청소</button>
-						<button class="infobtn" value="3">꾸미기</button>
-						<button class="infobtn" value="4">리폼</button>
-						<button class="infobtn" value="5">생활정보</button>
-
-
-						<c:if test="${ !empty loginUser }">
-						<div class="wdiv">
-							<button type="button" class="wbtn"
-								onclick='insertInfo();'>글쓰기</button>
-						</div>
-						</c:if>
-					</form>
-				</div>
- --%>
-
-		<%-- 		<div class="info list_div"
-					onclick="location.href='${contextPath}/info/detail'">
-					<ul class="board_list">
-						<c:forEach var="i" begin="1" end="4">
-							<div class="item" onclick="detailView(1)">
-								<!-- 1은 임시 값 -->
-								<div class="box">
-									<img src="${ contextPath }/resources/images/infoG.png">
-									<p class="category">[꾸미기]</p>
-									<p class="title">그린색 옷 스타일링</p>
-								</div>
-							</div>
-						</c:forEach>
-					</ul>
-				</div>
-
-
-				<div class="info list_div"
-					onclick="location.href='${contextPath}/info/detail'">
-					<ul class="board_list">
-						<c:forEach var="i" begin="1" end="4">
-							<div class="item" onclick="detailView(1)">
-								<!-- 1은 임시 값 -->
-								<div class="box">
-									<img src="${ contextPath }/resources/images/infoB.png">
-									<p class="category">[리폼]</p>
-									<p class="title">블랙티셔츠 리폼</p>
-								</div>
-							</div>
-						</c:forEach>
-					</ul>
-				</div>
- --%>
-
-
-				<%-- 				<div class="list_div">
-					<ul class="board_list">
-						<c:forEach var="board" items="${ boardList }">
-							<li>
-								<div class="box">
-									<img
-										src="${ contextPath }${ board.photoList.get(0).filePath}${ board.photoList.get(0).changeName }">
-									<p class="category">[ ${ board.cname } ]</p>
-									<p class="title">${ board.btitle }</p>
-									<p class="writer">${ board.userName }|조회수 : ${ board.bcount }</p>
-								</div>
-							</li>
-						</c:forEach>
-					</ul>
-				</div> --%>
 
 			</div>
 		</div>
@@ -633,42 +492,7 @@ color: rgb(135, 211, 124);
 		</c:otherwise>
 	</c:choose>
 
-	<!-- <script>
-		function all() {
-			
-				<c:if test="${ param.category =='all' }">selected</c:if>>전체</option>
-			
-						
-		}
-		
-		function clean() {
-			<option value="clean"
-				<c:if test="${ param.category =='clean' }">selected</c:if>>청소</option>
-			
-		}
-		
-		function decorate() {
-			<option value="decorate"
-				<c:if test="${ param.category =='decorate' }">selected</c:if>>꾸미기</option>
 	
-		}
-
-
-		function reform() {
-			<option value="reform"
-				<c:if test="${ param.category =='reform' }">selected</c:if>>리폼</option>
-	
-		}
-
-		function lifeInformation() {
-			<option value="lifeInformation"
-				<c:if test="${ param.category =='lifeInformation' }">selected</c:if>>생활정보</option>
-	
-		}
-	
-	
-	</script> -->
-
 
 
 

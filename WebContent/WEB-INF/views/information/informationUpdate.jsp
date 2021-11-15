@@ -13,8 +13,8 @@
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
 	rel="stylesheet">
 <style>
-*{
-	font-family: 'Nanum Gothic', sans-serif;
+body{
+	font-family: 'Noto Sans KR', sans-serif;
 }
 .second_menu {
 color: rgb(135, 211, 124);

@@ -13,8 +13,8 @@
    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
    rel="stylesheet">
 <style>
-*{
-   font-family: 'Nanum Gothic', sans-serif;
+body {
+   font-family: 'Noto Sans KR', sans-serif;
 }
 .second_menu {
 color: rgb(135, 211, 124);
@@ -282,7 +282,7 @@ color: rgb(135, 211, 124);
 
                   <span class="gray"> 조회수 : ${ board.bcount } </span> <span
                      class="gray"> </span>
-					<!-- 좋아요 : ${ board.likeCount } -->
+               <!-- 좋아요 : ${ board.likeCount } -->
                   <!-- <span><a >URL 복사</a></span> -->
 
                   <span class="gray"> 작성자 : ${ board.nickname } </span> <span
@@ -394,13 +394,13 @@ color: rgb(135, 211, 124);
     
     
     function Rshow(nick,content,aid,writer) {
-  	   document.querySelector(".Rbackground").className = "Rbackground Rshow";
-  	   
-    	  $("#RnickName").text(nick);
+        document.querySelector(".Rbackground").className = "Rbackground Rshow";
+        
+         $("#RnickName").text(nick);
          $("#Rcontent").text(content);
         let html = '<input type="hidden" value="'+aid+'" name="aid"><input type="hidden" value="'+writer+'" name="replyWriter">';
-         $(".hiddenAid").html(html);	 	  
-   		 }
+         $(".hiddenAid").html(html);         
+          }
 
       function Rclose() {
         document.querySelector(".Rbackground").className = "Rbackground";
@@ -494,6 +494,8 @@ color: rgb(135, 211, 124);
                           */
                      
                }
+               location.reload();
+               
                /* 갱신 된 replyList를 테이블에 다시 적용 */
                $(".reply_list").html(html);
                /* 댓글 작성 부분 리셋 */
@@ -540,6 +542,7 @@ color: rgb(135, 211, 124);
                         +'script>; */
                
                }
+               location.reload();
                
                /* 갱신 된 replyList를 테이블에 다시 적용 */
                $(".reply_list").html(html);
@@ -555,14 +558,14 @@ color: rgb(135, 211, 124);
 
    </script>
    
-<!--       <script>
+<script>
       $(".replyimg").hover(function(){
            $(this).attr("src", $(this).attr("src").replace("2.png", ".png"));
        }, function(){
            $(this).attr("src", $(this).attr("src").replace(".png", "2.png"));
        });  
       
-   </script>  -->
+   </script> 
    
 
    
@@ -588,11 +591,11 @@ color: rgb(135, 211, 124);
 
 
 <script>
-	function loginplz(){
-		if(confirm('로그인이 필요한 서비스입니다. 로그인 하시겠습니까?')){
-			location.href='${contextPath}/login';
-		}
-	}
+   function loginplz(){
+      if(confirm('로그인이 필요한 서비스입니다. 로그인 하시겠습니까?')){
+         location.href='${contextPath}/login';
+      }
+   }
 </script>
 
 
