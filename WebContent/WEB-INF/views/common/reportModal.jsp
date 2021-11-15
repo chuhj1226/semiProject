@@ -131,9 +131,7 @@
             border: 1px solid rgb(135, 211, 124);
             
         }
-        *{
-            font-family: 'Noto Sans KR', sans-serif;
-        }
+      
     </style>
   </head>
   <body>

@@ -20,9 +20,9 @@
 	crossorigin="anonymous"></script>
 
 <style>
-body{
+/* body{
 	font-family: 'Noto Sans KR', sans-serif;
-}
+} */
 .third_menu {
 color: rgb(135, 211, 124);
 }

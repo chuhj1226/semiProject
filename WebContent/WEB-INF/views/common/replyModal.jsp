@@ -131,9 +131,7 @@
             text-align: center;
             margin: 20px auto;
         }
-        *{
-            font-family: 'Noto Sans KR', sans-serif
-        }
+      
     </style>
   </head>
   <body>

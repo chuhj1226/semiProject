@@ -18,7 +18,7 @@
             margin-top: 70px;
             text-align: center;
 
-            font-family: 'Nanum Gothic', sans-serif;
+           font-family: 'Noto Sans KR', sans-serif;
         }
 
         .admin_nav>li {
@@ -93,7 +93,7 @@
             padding: 10px;
             color: #000;
             /* font-family: 'Gothic A1', sans-serif; */
-            font-family: 'Nanum Gothic', sans-serif;
+           font-family: 'Noto Sans KR', sans-serif;
             /* font-family: 'Gowun Batang', serif; */
         }
     </style>
