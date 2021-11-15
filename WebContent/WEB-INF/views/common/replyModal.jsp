@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/header_style.css" >
 <style>
 .Rbackground {
+font-family: 'Nanum Gothic', sans-serif;
 	position: fixed;
 	top: 0;
 	left: 0;

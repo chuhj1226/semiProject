@@ -25,6 +25,7 @@ color: rgb(135, 211, 124);
 	margin: auto;
 	margin-bottom: 2%;
 	z-index:1;
+	font-family: 'Nanum Gothic', sans-serif;
 }
 
 .wrap {

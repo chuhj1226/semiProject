@@ -281,10 +281,6 @@ boadr_paging a:hover {
 			<li><a class="arrow nnext" href="${ contextPath }/friend/main?page=${ pi.maxPage }${ searchParam }"></a></li>
 	</ul>
 
-	<div class="pagingcComment">
-		<p>꿀친 게시판의 게시글 ${ pi.listCount }개가 검색되었습니다.</p>
-	</div>
-
 </div>
  <%@ include file="/WEB-INF/views/common/footer.jsp" %>
 	<script>

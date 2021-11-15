@@ -18,7 +18,7 @@
             margin-top: 70px;
             text-align: center;
 
-           font-family: 'Noto Sans KR', sans-serif;
+      font-family: 'Nanum Gothic', sans-serif;
         }
 
         .admin_nav>li {
