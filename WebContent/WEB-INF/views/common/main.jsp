@@ -15,7 +15,7 @@
         }
 
         .main_header{
-            width: 1240px;
+            width: 1280px;
             height: 500px;
             display: flex;
         }
