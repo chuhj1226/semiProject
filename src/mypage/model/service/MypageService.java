@@ -167,4 +167,24 @@ public class MypageService {
 	      return returnMap;
 	}
 
+	public int selectLikeCount(int userNo) {
+		Connection conn = getConnection();
+		
+		int likeCount = mypageDao.getlikeCount(conn,userNo);
+		
+		close(conn);
+		
+		return likeCount;
+	}
+
+	public int selectProductCount(int userNo) {
+	Connection conn = getConnection();
+		
+		int productCount = mypageDao.getproductCount(conn,userNo);
+		
+		close(conn);
+		
+		return productCount;
+	}
+
 }

@@ -7,15 +7,20 @@
 <head>
 <meta charset="UTF-8">
 <title>자취는 템빨</title>
+	<!-- 메뉴바 -->
+	<jsp:include page="/WEB-INF/views/common/menubar.jsp">
+		<jsp:param name="pName" value="test" />
+	</jsp:include>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
 	rel="stylesheet">
 <style>
-body {
+/* body {
 	font-family: 'Noto Sans KR', sans-serif;
-}
+} */
 .second_menu {
 color: rgb(135, 211, 124);
 }
@@ -81,18 +86,17 @@ color: rgb(135, 211, 124);
 	margin-top : 50px;
 }
 
+ 
+.main-nav {
+	padding-bottom: 4px;
+}
 
 </style>
 </head>
 <body>
 
 
-	<!-- 메뉴바 -->
-	<jsp:include page="/WEB-INF/views/common/menubar.jsp">
-		<jsp:param name="pName" value="test" />
-	</jsp:include>
-
-	<!-- 썸머노트 -->
+		<!-- 썸머노트 -->
 	<link rel="stylesheet"
 		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
 	<script
@@ -104,6 +108,18 @@ color: rgb(135, 211, 124);
 		rel="stylesheet">
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>
+	
+<style>
+
+*, ::after, ::before {
+    box-sizing: content-box;
+}
+.memberjoin {
+    min-width: 65px;
+}
+
+ 
+</style>
 
 
 	<div class="outer">
