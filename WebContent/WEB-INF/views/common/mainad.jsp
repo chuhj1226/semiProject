@@ -154,19 +154,7 @@
 }
 
 /* 좌,우 슬라이드 버튼 */
-.slide-control>div {
-	display: none;
-}
 
-.section .left {
-	left: -20px;
-	background: url('/kh_semi/resources/images/left.png') center center/100% no-repeat;
-}
-
-.section .right {
-	right: -20px;
-	background: url('/kh_semi/resources/images/right.png') center center/100% no-repeat;
-}
 
 .section input[id="slide01"]:checked ~.slidewrap .slide-control>div:nth-child(1)
 	{
@@ -200,7 +188,7 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
-	width: 200px;
+	width: 120px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -211,7 +199,7 @@
 
 .slide-pagelist>li>label {
 	display: block;
-	padding: 10px;
+	padding: 8px;
 	text-align: center;
 	border-radius: 30px;
 	background: white;
@@ -220,22 +208,22 @@
 
 .section input[id="slide01"]:checked ~.slidewrap .slide-pagelist>li:nth-child(1)>label
 	{
-	background: rgb(52, 152, 219);
+	background: rgb(135, 211, 124);
 }
 
 .section input[id="slide02"]:checked ~.slidewrap .slide-pagelist>li:nth-child(2)>label
 	{
-	background: rgb(52, 152, 219);
+	background: rgb(135, 211, 124);
 }
 
 .section input[id="slide03"]:checked ~.slidewrap .slide-pagelist>li:nth-child(3)>label
 	{
-	background: rgb(52, 152, 219);
+	background: rgb(135, 211, 124);
 }
 
 .section input[id="slide04"]:checked ~.slidewrap .slide-pagelist>li:nth-child(4)>label
 	{
-	background: rgb(52, 152, 219);
+	background: rgb(135, 211, 124);
 }
 	
 	</style>
