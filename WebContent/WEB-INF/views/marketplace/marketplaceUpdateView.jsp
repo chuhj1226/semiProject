@@ -111,7 +111,7 @@ ol, ul {
 .preview>div {
 	position: absolute;
 	transform: translate(-50%, -50%);
-	width: 100px;
+	width: 80px;
 	left: 50%;
 	top: 57%;
 }
@@ -598,7 +598,7 @@ input:not ([type="file"] ):not ([type="radio"] ) {
 									<span id="warningText"></span>
 								</div>
 								<div>
-									<span id="counter2" style="margin-left: 20px;">0</span>/<span>2000</span>
+									<span id="counter2" style="margin-left: 20px;">0</span>/<span>4000</span>
 								</div>
 							</div>
 						</div>
@@ -734,7 +734,7 @@ input:not ([type="file"] ):not ([type="radio"] ) {
         $(document).ready(function () {
         	
         	 $("#counter").text($("#titleInput").val().length);
-        	 
+        	 $("#counter2").text($("#description").val().length);
             $("#titleInput").keyup(function () {
                 // 현재 요소의 값의 길이 알기
                 let inputLenth = $(this).val().length;
@@ -751,11 +751,11 @@ input:not ([type="file"] ):not ([type="radio"] ) {
                 let inputLenth = $(this).val().length;
                 $("#counter2").text(inputLenth);
 
-                if($(this).val().length > 2000) {
-                    $(this).val($(this).val().substring(0, 2000));
-                    $("#warningText").text("2000자를 초과하여 입력 하실 수 없습니다.");
+                if($(this).val().length > 4000) {
+                    $(this).val($(this).val().substring(0, 4000));
+                    $("#warningText").text("4000자를 초과하여 입력 하실 수 없습니다.");
                     $("#warningText").css('color','red');
-                    $('#counter2').text("2000");
+                    $('#counter2').text("4000");
                 } else {
                     $("#warningText").text("");
                 }
