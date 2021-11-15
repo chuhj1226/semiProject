@@ -34,11 +34,13 @@
 <style>
 @charset "UTF-8";
 
-.forth_menu {
-color: rgb(135, 211, 124);
-}
+
 body {
 	font-family: 'Noto Sans KR', sans-serif;
+	
+}
+.forth_menu {
+color: rgb(135, 211, 124);
 }
 
 .container {
@@ -49,7 +51,6 @@ body {
 
 /* 이미지 영역 */
 .imagearea {
-	/* 	background-color: gray; */
 	margin-top: 5%;
 	height: 450px;
 	width: 100%;
@@ -71,12 +72,13 @@ body {
 	align-items: center;
 }
 
-
 #image_area1 {
 	float: left;
 	height: 450px;
 	width: 47%;
+	color: red;
 }
+
 
 .files {
 	display: none;
@@ -99,6 +101,7 @@ body {
 #image_area3 {
 	height: 210px;
 	width: 300px;
+	color: red;
 }
 
 #image_area4 {
@@ -120,7 +123,7 @@ body {
 
 .title {
 	width: 1280px;
-	margin: auto;
+	
 	margin-bottom: 3%;
 }
 
@@ -135,13 +138,10 @@ body {
 	border-right: none;
 	border-left: none;
 	border-bottom: 1px solid;
-	/* 	border-color: rgb(213, 213, 213);
-	border-width: 1px; */
 	width: 1280px;
 	height: 40px;
 	font-size: 30px;
 	font-weight: bolder;
-	/* color: rgb(116, 116, 116); */
 	margin-top: 100px;
 }
 
@@ -227,6 +227,8 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	color: #333;
+	margin-left: 10px;
+	
 }
 
 .textarea {
@@ -237,7 +239,7 @@ body {
 .cancelbutton {
 	width: 120px;
 	height: 40px;
-	margin-top: 3%;
+	margin-top: 1px;
 	float: right;
 	border: none;
 	background-color: rgb(213, 213, 213);
@@ -256,7 +258,8 @@ body {
 .previewbutton {
 	width: 120px;
 	height: 40px;
-	margin-top: 3%;
+	margin-top: 1px;
+	margin-left: 23%;
 	border: none;
 	background-color: rgb(213, 213, 213);
 }
@@ -305,6 +308,18 @@ body {
 	width: 30px;
 	float: right;
 	margin-top: 10px;
+}
+
+*, ::after, ::before {
+    box-sizing: content-box;
+}
+
+button {
+line-height:normal;
+}
+dl, ol, ul {
+    margin-bottom: 0rem;
+
 }
 </style>
 </head>
