@@ -129,8 +129,8 @@
         }
         
         .board_paging {
-	height: 50px;
-	line-height: 50px;
+	height: 40px;
+	line-height: 40px;
 	display: flex;
 	justify-content: center;
 	list-style: none;
@@ -140,15 +140,16 @@
 
 .board_paging a {
 	text-decoration: none;
-	line-height: 50px;
+	line-height: 40px;
 	display: block;
 	text-align: center;
+	font-weight: bold;
 	margin: 0 3px;
-	border: 1px solid #e6e6e6;
-	width: 50px;
-	height: 50px;
+	/* border: 1px solid #e6e6e6; */
+	width: 40px;
+	height: 40px;
 	text-align: center;
-	color: #999999;
+	/* color: #999999; */
 	text-decoration: none;
 }
 
@@ -157,35 +158,33 @@ boadr_paging a:hover {
 }
 
 .board_paging a.current_page { /*현재 페이지 */
-	/* border-bottom: 2px solid #282A35;
-    font-weight: bold; */
-	background-color: #42454c;
-	color: #fff;
-	border: 1px solid #42454c;
+	/* background-color: #030066; */
+	/* color: #fff; */
+	border: 2px solid rgb(135, 211, 124);/* #030066; */
+	border-radius: 50%;
+	margin-top: -3%
 }
 
 .board_paging .pprev {
-	background: #f8f8f8
+	background:
 		url('<%=request.getContextPath()%>/resources/images/page_pprev.png')
 		no-repeat center center;
 }
 
 .board_paging .prev {
-	background: #f8f8f8 url('${contextPath}/resources/images/page_prev.png')
+	background: url('${contextPath}/resources/images/page_prev.png')
 		no-repeat center center;
 	margin-right: 7px;
 }
 
 .board_paging .next {
-	background: #f8f8f8 url('${contextPath}/resources/images/page_next.png')
+	background: url('${contextPath}/resources/images/page_next.png')
 		no-repeat center center;
 	margin-left: 7px;
 }
 
 .board_paging .nnext {
-	background: #f8f8f8
-		url('${contextPath}/resources/images/page_nnext.png') no-repeat center
-		center;
+	background:	url('${contextPath}/resources/images/page_nnext.png') no-repeat center center;
 	margin-right: 0;
 }
 
