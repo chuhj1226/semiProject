@@ -313,7 +313,8 @@ color: rgb(135, 211, 124);
 *, ::after, ::before {
     box-sizing: content-box;
 }
- button {
+
+button {
 line-height:normal;
 }
 

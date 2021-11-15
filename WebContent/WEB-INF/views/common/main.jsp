@@ -49,7 +49,7 @@
             font-family: 'Nanum Gothic', sans-serif;
             border-radius: 5px;
             border-color: white;
-            background-color:transparent;
+            background-color: rgb(135, 211, 124);
             cursor: pointer;
 			margin-top: 415px;
 			margin-left: 795px;
@@ -58,7 +58,7 @@
         }
         
     	#best_btn:hover {
-			background-color: rgb(135, 211, 124);
+			background-color: #949494;
 			border: none;
 		}
 		
