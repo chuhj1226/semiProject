@@ -13,8 +13,8 @@
 
 
 <style>
-*{
-	font-family: 'Nanum Gothic', sans-serif;
+body{
+	font-family: 'Noto Sans KR', sans-serif;
 }
 .third_menu {
 color: rgb(135, 211, 124);
@@ -269,12 +269,16 @@ input:not ([type="file"] ):not ([type="radio"] ) {
 	position: absolute;
 	top: 0.5rem;
 	right: 0.5rem;
-	z-index: 100;
+	z-index: 10;
 	cursor: pointer;
 }
 
 #cancel1:focus, #cancel1:active {
 	border: 0px;
+}
+
+.page-header{
+    box-sizing: content-box;
 }
 
 #cancel2 {
@@ -290,7 +294,7 @@ input:not ([type="file"] ):not ([type="radio"] ) {
 	position: absolute;
 	top: 0.5rem;
 	right: 0.5rem;
-	z-index: 100;
+	z-index: 10;
 	cursor: pointer;
 }
 
@@ -311,7 +315,7 @@ input:not ([type="file"] ):not ([type="radio"] ) {
 	position: absolute;
 	top: 0.5rem;
 	right: 0.5rem;
-	z-index: 100;
+	z-index: 10;
 	cursor: pointer;
 }
 
@@ -320,7 +324,7 @@ input:not ([type="file"] ):not ([type="radio"] ) {
 }
 
 .inputBox input:not([type=file]){
-	padding: 0.5rem 1rem;
+	padding: 1rem 1rem;
 } 
 </style>
 </head>
@@ -330,7 +334,7 @@ input:not ([type="file"] ):not ([type="radio"] ) {
 	<jsp:include page="/WEB-INF/views/common/menubar.jsp" />
 
 	<!-- 썸머노트 -->
-	<link rel="stylesheet"
+	<!-- <link rel="stylesheet"
 		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
@@ -340,7 +344,7 @@ input:not ([type="file"] ):not ([type="radio"] ) {
 		href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css"
 		rel="stylesheet">
 	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>
+		src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script> -->
 
 
 	<% 
@@ -765,7 +769,7 @@ input:not ([type="file"] ):not ([type="radio"] ) {
         });
     </script>
 
-	<script
-		src="<%=request.getContextPath()%>/resources/js/summernote_func2.js"></script>
+	<%-- <script
+		src="<%=request.getContextPath()%>/resources/js/summernote_func2.js"></script> --%>
 </body>
 </html>
