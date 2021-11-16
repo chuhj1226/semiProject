@@ -180,7 +180,7 @@ boadr_paging a:hover {
 
 .image_area1 img {
 	height: 250px;	
-	width: 100%;
+	width: 320px;
 	object-fit: cover;
 }
 /* 지역 셀렉트 박스 */
