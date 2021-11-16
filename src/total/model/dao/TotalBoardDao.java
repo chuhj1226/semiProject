@@ -43,7 +43,6 @@ public class TotalBoardDao {
 			
 			if(search != null) {
 				pstmt.setString(1, search);
-				pstmt.setString(2, search);
 			}
 			
 			rset = pstmt.executeQuery();
@@ -80,7 +79,6 @@ public class TotalBoardDao {
 			int index = 1;
 			
 			if(search!= null) {
-				pstmt.setString(index++, search);
 				pstmt.setString(index++, search);
 			}
 			
