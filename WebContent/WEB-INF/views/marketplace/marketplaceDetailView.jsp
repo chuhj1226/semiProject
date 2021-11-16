@@ -809,7 +809,7 @@ ul.imgs li {
 			</div>
 
 			<div class="item_context">
-				<p>${ board.bcontent }</p>
+				<pre>${ board.bcontent }</pre>
 
 
 
