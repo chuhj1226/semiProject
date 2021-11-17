@@ -216,8 +216,6 @@
 
 </div>
  <script>
-      /* 댓글달기 버튼 클릭 시 Reply 테이블에 insert 기능 수행 후 
-      비동기적으로 새로 갱신된 댓글 목록을 Reply 테이블에서 select해서 화면에 적용시키는 기능 */
       function addReply() {
          $.ajax({
             url : "${ contextPath }/userSearch",

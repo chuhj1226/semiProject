@@ -100,7 +100,7 @@
         }
 
         .report_list .writer {
-            width: 80px;
+            width: 100px;
         }
 
         .report_list .read {
@@ -133,7 +133,7 @@
 	list-style: none;
 	width: 480px;
 	margin: auto;
-
+	margin-bottom: 50px;
 }
 
 .board_paging a {

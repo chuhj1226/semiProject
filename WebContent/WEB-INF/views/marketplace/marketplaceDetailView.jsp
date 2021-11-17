@@ -808,7 +808,7 @@ ul.imgs li {
 			</div>
 
 			<div class="item_context">
-				<pre>${ board.bcontent }</pre>
+				<p>${ board.bcontent }</p>
 
 
 
@@ -884,7 +884,7 @@ ul.imgs li {
 										<span class="dasd">${reply.acontent}</span>
 									</div>
 									<div class="commentReportBox">
-										<c:if test="${ loginUser.userNo == reply.writer }">
+										<c:if test="${ loginUser.userNo == reply.writer || loginUser.manager== 'Y' }">
 											<div class="commentDelete"
 												onclick="deleteReply(${board.bid}, ${ reply.aid });">
 												<img style="width: 30px; height: 30px;"
@@ -1161,7 +1161,7 @@ ul.imgs li {
 			<div class="pageButton">
 				<button class="listBtn"
 					onclick="location.href='${contextPath}/marketplace/list'">목록으로</button>
-				<c:if test="${ loginUser.userNo == board.bwriter }">
+				<c:if test="${ loginUser.userNo == board.bwriter || loginUser.manager== 'Y' }">
 					<button class="updateBtn" onclick="updateBoardView();">수정하기</button>
 					<button class="deleteBtn" onclick="deleteBoard();">삭제하기</button>
 				</c:if>

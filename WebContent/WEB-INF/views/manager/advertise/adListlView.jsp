@@ -122,7 +122,7 @@ a {
 	list-style: none;
 	width: 480px;
 	margin: auto;
-
+	margin-bottom: 50px;
 }
 
 .board_paging a {

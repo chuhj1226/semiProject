@@ -112,6 +112,9 @@ font-family: 'Nanum Gothic', sans-serif;
         
         .report_h4 {
             margin-left: 75px;
+              overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
         }
         
         .btns {
@@ -135,6 +138,12 @@ font-family: 'Nanum Gothic', sans-serif;
         }
         *{
             font-family: 'Noto Sans KR', sans-serif
+        }
+               .pTag {
+                 overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width:200px;
         }
     </style>
   </head>
@@ -165,12 +174,12 @@ font-family: 'Nanum Gothic', sans-serif;
                 <div>
     
                     <h4 class="report_h4">제목</h4>
-                    <p><%=ntitle %></p>
+                    <p class="pTag"><%=ntitle %></p>
                 </div>
                 <div>
     
                     <h4 class="report_h4">작성자</h4>
-                    <p><%=sendNickname %></p>
+                    <p class="pTag"><%=sendNickname %></p>
                 </div>
                 <div>
                     <h4 class="report_h4">신고 사유</h4>

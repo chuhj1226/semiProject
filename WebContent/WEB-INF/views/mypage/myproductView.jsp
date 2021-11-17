@@ -59,6 +59,9 @@
 
 .product_name {
 	margin-left: 10px;
+	  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .product_img {
@@ -101,7 +104,7 @@ li {
 	justify-content: center;
 	list-style: none;
 	width: 480px;
-	margin: auto;
+	margin: 30px auto;
 
 }
 
@@ -146,13 +149,7 @@ boadr_paging a:hover {
 	margin-right: 0;
 }
 
-.pagingcComment {
-	text-align:center;
-	font-weight: 900;
-	margin-top: 3px;
-	color: #707070;
-	font-size: 15px;
-}
+
 </style>
 </head>
 <body>

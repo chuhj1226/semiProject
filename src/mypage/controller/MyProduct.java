@@ -45,6 +45,8 @@ public class MyProduct extends HttpServlet {
 		 request.setAttribute("pi", map.get("pi"));
 	     request.setAttribute("boardList", map.get("boardList"));
 	     
+	     System.out.println(map.get("pi"));
+	     
 	     System.out.println(map.get("boardList"));
 
 		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/mypage/myproductView.jsp");

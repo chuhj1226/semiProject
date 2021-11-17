@@ -78,15 +78,18 @@ a {
 	margin: 0 52px;
 	color: #432;
 }
+
 .both>h2 {
-	margin: 0 43px;
+   margin: 0 43px;
+	margin-left :45px;
 }
+
 .likeOnly>h2{
 	margin: 0 51px;
 	margin-left :45px;
 }
 .productOnly>h2{
-	margin: 0 43px;
+	margin: 0 45px;
 	margin-left :51px;
 }
 
@@ -143,28 +146,28 @@ a {
 				</a>
 			</div>
 			<c:choose>
-			<c:when test="${ likeCount <= 10 and productCount <= 10}">
+			<c:when test="${ likeCount < 10 and productCount < 10}">
 			<div class="count">
 				<h2>${ likeCount }</h2>
 				<h2>${ productCount }</h2>
 			</div>
 			</c:when>
-			<c:when test="${ likeCount >= 10 and productCount <= 10}">
+			<c:when test="${ likeCount > 10 and productCount < 10}">
 			<div class="count likeOnly">
 				<h2>${ likeCount }</h2>
 				<h2>${ productCount }</h2>
 			</div>
 			</c:when>
-			<c:when test="${ likeCount <= 10 and productCount >= 10}">
+			<c:when test="${ likeCount < 10 and productCount > 10}">
 			<div class="count productOnly">
 				<h2>${ likeCount }</h2>
 				<h2>${ productCount }</h2>
 			</div>
 			</c:when>
-			<c:when test="${ likeCount >= 10 and productCount >= 10}"> --%>
-			<div class="count productOnly">
-				<h2>1</h2>
-				<h2>10</h2>
+			<c:when test="${ likeCount >= 10 and productCount >= 10}">
+			<div class="count both">
+				<h2>${ likeCount }</h2>
+				<h2>${ productCount }</h2>
 			</div>
 			</c:when>
 			</c:choose>

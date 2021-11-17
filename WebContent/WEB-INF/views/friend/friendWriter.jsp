@@ -239,7 +239,7 @@ color: rgb(135, 211, 124);
 .cancelbutton {
 	width: 120px;
 	height: 40px;
-	margin-top: 1px;
+	margin-top: 3.2%;
 	float: right;
 	border: none;
 	background-color: rgb(213, 213, 213);
@@ -426,11 +426,11 @@ font-family: 'Noto Sans KR', sans-serif;
 
 
 				<button type="submit" class="enrollbutton">등록</button>
+	<button type="button" class="cancelbutton">취소</button>
 			</div>
 		</div>
 	</form>
 	
-	<button type="button" class="cancelbutton">취소</button>
 
 	<script>
 	//toggle slide
