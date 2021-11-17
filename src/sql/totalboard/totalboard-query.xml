@@ -14,7 +14,8 @@
 		       COUNT(*)
 		  FROM BOARD
 		 WHERE STATUS = 'N'
-		   AND (BTITLE LIKE '%' || ? || '%')
+		   AND BTITLE LIKE '%' || ? || '%'
+
 	</entry>
 	
 	<entry key="selectList">
@@ -47,7 +48,7 @@
 		   FROM BOARD B
 		   JOIN MEMBER ON(BWRITER = USER_NO)
 		  WHERE B.STATUS = 'N'
-		    AND (BTITLE LIKE '%' || ? || '%')
+		    AND BTITLE LIKE '%' || ? || '%'
 		  ORDER BY BID DESC) A)
 		  WHERE RNUM BETWEEN ? AND ?
 	</entry>
