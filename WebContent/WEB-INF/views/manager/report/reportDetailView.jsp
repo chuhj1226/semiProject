@@ -150,7 +150,6 @@
                         게시물 URL : <a href="${contextPath}/friend/detail?bid=${ report.bid }">Go to the link</a> 
                     </p>
 				</c:when>
-				
 				<c:when test="${ report.btype == 4 }">
 				<c:set var="searchParam" value="userNo=${ report.rwriter}&nno=${ report.nno }" />
 				
@@ -159,8 +158,6 @@
                         게시물 URL : <a href="${contextPath}/note/receive/detail?${searchParam }">Go to the link</a> 
                     </p>
 				</c:when>
-				
-				
 				<c:otherwise>
 				 <p>게시판 유형 : 자취는 꿀팁 </p>
 					<p>

@@ -118,6 +118,9 @@ font-family: 'Nanum Gothic', sans-serif;
         
         .report_h4 {
             margin-left: 75px;
+              overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
         }
         
         .btns {
@@ -132,7 +135,12 @@ font-family: 'Nanum Gothic', sans-serif;
             text-align: center;
             margin: 20px auto;
         }
-      
+             .pTag {
+                 overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width:200px;
+        }
     </style>
   </head>
   <body>
@@ -150,13 +158,13 @@ font-family: 'Nanum Gothic', sans-serif;
                 <h2 class="report_title">신고하기</h2>
                 <div>
                     <h4 class="report_h4">댓글 작성자</h4>
-                    <p id="RnickName"></p>
+                    <p class="pTag" id="RnickName"></p>
     
                 </div>
                 <div>
     
                     <h4 class="report_h4">댓글 내용</h4>
-                    <p id="Rcontent"></p>
+                    <p class="pTag" id="Rcontent"></p>
                 </div>
                 <div>
                     <h4 class="report_h4">신고 사유</h4>

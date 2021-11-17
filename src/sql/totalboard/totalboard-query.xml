@@ -15,6 +15,7 @@
 		  FROM BOARD
 		 WHERE STATUS = 'N'
 		   AND BTITLE LIKE '%' || ? || '%'
+
 	</entry>
 	
 	<entry key="selectList">

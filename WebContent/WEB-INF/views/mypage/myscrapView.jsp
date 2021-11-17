@@ -57,6 +57,9 @@
 
 .product_name {
 	margin-left: 10px;
+	  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .product_img {
@@ -98,7 +101,7 @@ li {
 	justify-content: center;
 	list-style: none;
 	width: 480px;
-	margin: auto;
+	margin: 30px auto;
 
 }
 

@@ -98,6 +98,7 @@ public class LoginCheckFilter implements Filter {
       permitList.add("/kh_semi/total/list");
       permitList.add("/kh_semi/info/detail");
       permitList.add("/kh_semi/info/list");
+      permitList.add("/kh_semi/ad/insert");
       
      
       resourceList = new ArrayList<String>();

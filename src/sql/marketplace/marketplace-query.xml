@@ -422,12 +422,13 @@
 		WHERE BID = ? </entry> -->
 
 
-	<entry key="deleteImage">
-		UPDATE IMAGE
-		SET
-		STATUS = 'Y'
-		WHERE BID = ?
-	</entry>
+<entry key="deleteImage">
+      UPDATE IMAGE
+      SET
+      STATUS = 'Y'
+      WHERE BID = ?
+        AND STATUS='N'
+   </entry>
 
 
 
