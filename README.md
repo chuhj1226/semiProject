@@ -23,7 +23,7 @@ HTML , CSS , JAVASCRIPT , JQUERY , Oracle , GITHub , JAVA , Tomcat , Servlet , B
 
 # [역할 분담]
 - 김정훈 : 
-          - 회원 관련 기능
+          [회원 관련 기능]
                : 회원가입, 로그인, 아이디 찾기, 임시비밀번호 발송
           - 메인 페이지
                : 전체 게시글 조회, 전체 게시글 검색, 메인화면 인기 게시글 목록
